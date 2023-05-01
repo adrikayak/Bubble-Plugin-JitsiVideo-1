@@ -1,0 +1,181 @@
+{
+    "add_is_visible": true,
+    "category": "visual elements",
+    "default_dim": {
+        "height": 600,
+        "width": 600
+    },
+    "display": "Jitsi",
+    "events": {
+        "AAN": {
+            "caption": "participant_joined",
+            "name": "participant_joined"
+        },
+        "AAO": {
+            "caption": "participant_left",
+            "name": "participant_left"
+        },
+        "AAP": {
+            "caption": "password_required",
+            "name": "password_required"
+        },
+        "AAQ": {
+            "caption": "ready_to_close",
+            "name": "ready_to_close"
+        },
+        "AAR": {
+            "caption": "videoconference_joined",
+            "name": "videoconference_joined"
+        },
+        "AAS": {
+            "caption": "videoconference_left",
+            "name": "videoconference_left"
+        },
+        "AAT": {
+            "caption": "displayname_change",
+            "name": "displayname_change"
+        },
+        "AAU": {
+            "caption": "email_change",
+            "name": "email_change"
+        },
+        "AAV": {
+            "caption": "avatarurl_change",
+            "name": "avatarurl_change"
+        },
+        "AAs": {
+            "caption": "audioMute_status_changed",
+            "name": "audiomute_status_changed"
+        },
+        "AAv": {
+            "caption": "videomute_status_changed",
+            "name": "videomute_status_changed"
+        }
+    },
+    "fields": {
+        "AAn": {
+            "caption": "mic_button",
+            "default_val": false,
+            "doc": "Enable mute mic button at toolbar",
+            "editor": "Checkbox",
+            "in_style": true,
+            "name": "mic_button",
+            "rank": 0
+        },
+        "ABO": {
+            "caption": "cam_button",
+            "default_val": false,
+            "doc": "Enable mute cam button at toolbar",
+            "editor": "Checkbox",
+            "in_style": true,
+            "name": "cam_button",
+            "rank": 1
+        }
+    },
+    "has_reset_fn": false,
+    "icon": "ion-ios-videocam",
+    "property_applications": {
+        "Border": true,
+        "BoxShadow": true,
+        "MinWidth": true,
+        "resizable": true
+    },
+    "states": {
+        "AAD": {
+            "caption": "number_of_participants",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\treturn 0;\n}"
+            },
+            "name": "number_of_participants",
+            "value": "number"
+        },
+        "AAE": {
+            "caption": "on_meeting",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\treturn false;\n}"
+            },
+            "name": "on_meeting",
+            "value": "boolean"
+        },
+        "AAF": {
+            "caption": "room_name",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n    \n \treturn '';\n}"
+            },
+            "name": "room_name",
+            "value": "text"
+        },
+        "AAG": {
+            "caption": "local_role",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\treturn '';\n}"
+            },
+            "name": "local_role",
+            "value": "text"
+        },
+        "AAH": {
+            "caption": "participant_id",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\treturn 0;\n}"
+            },
+            "name": "participant_id",
+            "value": "text"
+        },
+        "AAI": {
+            "caption": "user_id",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\treturn '';\n}"
+            },
+            "name": "user_id",
+            "value": "text"
+        },
+        "AAJ": {
+            "caption": "participant_displayname",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\treturn '';\n}"
+            },
+            "name": "participant_displayname",
+            "value": "text"
+        },
+        "AAK": {
+            "caption": "participant_email",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\treturn '';\n}"
+            },
+            "name": "participant_email",
+            "value": "text"
+        },
+        "AAL": {
+            "caption": "participant_avatarurl",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\treturn '';\n}"
+            },
+            "name": "participant_avatarurl",
+            "value": "text"
+        },
+        "AAM": {
+            "caption": "jitsi_ready",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\treturn false;\n}"
+            },
+            "name": "jitsi_ready",
+            "value": "boolean"
+        },
+        "AAt": {
+            "caption": "audio_muted",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "audio_muted",
+            "value": "boolean"
+        },
+        "AAu": {
+            "caption": "video_muted",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "video_muted",
+            "value": "boolean"
+        }
+    }
+}

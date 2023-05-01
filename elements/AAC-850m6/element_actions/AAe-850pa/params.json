@@ -1,0 +1,12 @@
+{
+    "caption": "set_avatarurl",
+    "fields": {
+        "ABG": {
+            "caption": "url of the avatar",
+            "editor": "DynamicValue",
+            "name": "avatarurl",
+            "rank": 0,
+            "value": "text"
+        }
+    }
+}

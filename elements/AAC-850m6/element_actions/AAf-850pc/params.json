@@ -1,0 +1,12 @@
+{
+    "caption": "set_email",
+    "fields": {
+        "ABH": {
+            "caption": "email",
+            "editor": "DynamicValue",
+            "name": "email",
+            "rank": 0,
+            "value": "text"
+        }
+    }
+}

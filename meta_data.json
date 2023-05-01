@@ -1,4 +1,8 @@
 {
-    "image": "//s3.amazonaws.com/appforest_uf/f1531455189113x959372189361602000/Bubble%20Icon.png",
-    "name": "JitsiVideo"
+    "categories": {
+        "0": "productivity"
+    },
+    "image": "//s3.amazonaws.com/appforest_uf/f1658924838752x294685826516103200/Logo_Jitsi.svg",
+    "license": "private",
+    "name": "Jitsi"
 }

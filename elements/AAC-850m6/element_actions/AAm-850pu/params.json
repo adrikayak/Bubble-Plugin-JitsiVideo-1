@@ -1,0 +1,12 @@
+{
+    "caption": "get_userinfo",
+    "doc": "",
+    "fields": {
+        "ABN": {
+            "caption": "participant_ID",
+            "editor": "DynamicValue",
+            "name": "participant_id",
+            "rank": 0
+        }
+    }
+}

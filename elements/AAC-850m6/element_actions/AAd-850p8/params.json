@@ -1,0 +1,76 @@
+{
+    "caption": "start_session",
+    "fields": {
+        "AAy": {
+            "caption": "start with audio muted",
+            "default_val": false,
+            "editor": "DynamicValue",
+            "name": "startWithAudioMuted",
+            "rank": 0,
+            "value": "boolean"
+        },
+        "AAz": {
+            "caption": "filmStripOnly",
+            "default_val": false,
+            "editor": "DynamicValue",
+            "name": "filmstriponly",
+            "rank": 2,
+            "value": "boolean"
+        },
+        "ABA": {
+            "caption": "room_name",
+            "editor": "DynamicValue",
+            "name": "room_name",
+            "rank": 3,
+            "value": "text"
+        },
+        "ABB": {
+            "caption": "room_password",
+            "editor": "DynamicValue",
+            "name": "room_password",
+            "optional": true,
+            "rank": 4,
+            "value": "text"
+        },
+        "ABC": {
+            "caption": "role",
+            "editor": "Dropdown",
+            "name": "role",
+            "options": "moderator,participant",
+            "rank": 5
+        },
+        "ABD": {
+            "caption": "prejoin_page_enabled",
+            "default_val": true,
+            "doc": "When 'true', it shows an intermediate page before joining, where the user can configure their devices.",
+            "editor": "DynamicValue",
+            "name": "prejoin_page_enabled",
+            "rank": 6,
+            "value": "boolean"
+        },
+        "ABE": {
+            "caption": "toggle lobby",
+            "default_val": false,
+            "doc": "Requires validation before user can log in",
+            "editor": "DynamicValue",
+            "name": "toggle_lobby",
+            "rank": 7,
+            "value": "boolean"
+        },
+        "ABF": {
+            "caption": "start with video muted",
+            "editor": "DynamicValue",
+            "name": "startWithVideoMuted",
+            "rank": 1,
+            "value": "boolean"
+        },
+        "ABP": {
+            "caption": "Participant name",
+            "doc": "Name used to identify the videocall participant",
+            "editor": "DynamicValue",
+            "name": "participant_name",
+            "rank": 8,
+            "value": "text"
+        }
+    }
+}

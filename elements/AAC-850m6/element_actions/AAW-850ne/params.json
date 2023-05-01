@@ -1,0 +1,13 @@
+{
+    "caption": "Update participant name",
+    "doc": "Updates the name used to identify the videocall participant",
+    "fields": {
+        "AAw": {
+            "caption": "Participant name",
+            "editor": "DynamicValue",
+            "name": "participant_name",
+            "rank": 0,
+            "value": "text"
+        }
+    }
+}

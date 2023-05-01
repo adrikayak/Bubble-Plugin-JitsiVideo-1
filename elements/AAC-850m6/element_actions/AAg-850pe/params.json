@@ -1,0 +1,12 @@
+{
+    "caption": "set_subject",
+    "fields": {
+        "ABI": {
+            "caption": "subject",
+            "editor": "DynamicValue",
+            "name": "subject",
+            "rank": 0,
+            "value": "text"
+        }
+    }
+}

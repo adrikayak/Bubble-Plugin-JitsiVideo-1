@@ -1,0 +1,11 @@
+{
+    "caption": "get_displayname",
+    "fields": {
+        "ABM": {
+            "caption": "participant_id",
+            "editor": "DynamicValue",
+            "name": "participant_id",
+            "rank": 0
+        }
+    }
+}

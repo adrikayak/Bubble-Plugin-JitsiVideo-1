@@ -1,0 +1,12 @@
+{
+    "caption": "set_videoquality",
+    "fields": {
+        "AAx": {
+            "caption": "quality",
+            "editor": "DynamicValue",
+            "name": "quality",
+            "rank": 0,
+            "value": "number"
+        }
+    }
+}

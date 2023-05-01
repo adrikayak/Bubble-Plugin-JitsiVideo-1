@@ -1,0 +1,12 @@
+{
+    "caption": "get_email",
+    "fields": {
+        "ABK": {
+            "caption": "participant_id",
+            "editor": "DynamicValue",
+            "name": "participant_id",
+            "rank": 0,
+            "value": "text"
+        }
+    }
+}

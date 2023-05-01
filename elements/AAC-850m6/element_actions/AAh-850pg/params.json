@@ -1,0 +1,11 @@
+{
+    "caption": "set_roompassword",
+    "fields": {
+        "ABJ": {
+            "caption": "password",
+            "editor": "DynamicValue",
+            "name": "password",
+            "rank": 0
+        }
+    }
+}
