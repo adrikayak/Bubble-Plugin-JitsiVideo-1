@@ -8,15 +8,18 @@
     "display": "Jitsi",
     "events": {
         "AAN": {
-            "caption": "participant_joined",
+            "caption": "participant joined the meeting",
+            "doc": "Indicates when a new participant has joined the meeting",
             "name": "participant_joined"
         },
         "AAO": {
-            "caption": "participant_left",
+            "caption": "participant left the meeting",
+            "doc": "Indicated when a participant has left the meeting",
             "name": "participant_left"
         },
         "AAP": {
             "caption": "password_required",
+            "doc": "",
             "name": "password_required"
         },
         "AAQ": {
@@ -54,7 +57,7 @@
     },
     "fields": {
         "AAn": {
-            "caption": "mic_button",
+            "caption": "Microphone button",
             "default_val": false,
             "doc": "Enable mute mic button at toolbar",
             "editor": "Checkbox",
@@ -63,7 +66,7 @@
             "rank": 0
         },
         "ABO": {
-            "caption": "cam_button",
+            "caption": "Camera button",
             "default_val": false,
             "doc": "Enable mute cam button at toolbar",
             "editor": "Checkbox",
@@ -82,7 +85,8 @@
     },
     "states": {
         "AAD": {
-            "caption": "number_of_participants",
+            "caption": "numberOfParticipants",
+            "doc": "Number of participants",
             "initialization_code": {
                 "fn": "function(properties, context) {\n\n\treturn 0;\n}"
             },
@@ -90,7 +94,8 @@
             "value": "number"
         },
         "AAE": {
-            "caption": "on_meeting",
+            "caption": "onMeeting",
+            "doc": "Is there an active meeting?",
             "initialization_code": {
                 "fn": "function(properties, context) {\n\n\treturn false;\n}"
             },
@@ -98,11 +103,12 @@
             "value": "boolean"
         },
         "AAF": {
-            "caption": "room_name",
+            "caption": "meetingId",
+            "doc": "ID of the meeting",
             "initialization_code": {
                 "fn": "function(properties, context) {\n    \n \treturn '';\n}"
             },
-            "name": "room_name",
+            "name": "meeting_id",
             "value": "text"
         },
         "AAG": {
@@ -130,7 +136,8 @@
             "value": "text"
         },
         "AAJ": {
-            "caption": "participant_displayname",
+            "caption": "participantDisplayname",
+            "doc": "Name to be displayed for the participant",
             "initialization_code": {
                 "fn": "function(properties, context) {\n\n\treturn '';\n}"
             },
@@ -138,7 +145,8 @@
             "value": "text"
         },
         "AAK": {
-            "caption": "participant_email",
+            "caption": "participantEmail",
+            "doc": "Email of the participant",
             "initialization_code": {
                 "fn": "function(properties, context) {\n\n\treturn '';\n}"
             },
@@ -163,16 +171,18 @@
         },
         "AAt": {
             "caption": "audio_muted",
+            "doc": "Indicates whether the microphone is currently muted",
             "initialization_code": {
-                "fn": "function(properties, context) {\n\n\n\n}"
+                "fn": "function(properties, context) {\n    \n}"
             },
             "name": "audio_muted",
             "value": "boolean"
         },
         "AAu": {
             "caption": "video_muted",
+            "doc": "Indicates whether the camera is currently muted",
             "initialization_code": {
-                "fn": "function(properties, context) {\n\n\n\n}"
+                "fn": "function(properties, context) {\n\n}"
             },
             "name": "video_muted",
             "value": "boolean"

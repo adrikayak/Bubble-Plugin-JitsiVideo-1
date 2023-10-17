@@ -1,6 +1,6 @@
 {
     "caption": "Update participant name",
-    "doc": "Updates the name used to identify the videocall participant",
+    "doc": "Updates the name used to identify the meeting participant",
     "fields": {
         "AAw": {
             "caption": "Participant name",

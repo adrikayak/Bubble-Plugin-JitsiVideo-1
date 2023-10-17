@@ -17,8 +17,12 @@ function(instance, properties, context) {
     }
         
 	
-    const domain = 'meet.jit.si';
-    //const domain = 'meet.letsbelong.io';
+    if (properties.jitsiServerURL == null) {
+    	var domain = 'meet.jit.si';
+	} else {
+    	var domain = properties.jitsiServerURL;
+	}
+    
     const options = {
     	roomName: properties.room_name,
         parentNode: instance.data.parentNode,
@@ -27,7 +31,8 @@ function(instance, properties, context) {
             startWithVideoMuted: properties.startWithVideoMuted,
             enableUserRolesBasedOnToken: true,
             enableFeaturesBasedOnToken: true,
-            prejoinPageEnabled: properties.prejoin_page_enabled
+            prejoinPageEnabled: properties.prejoin_page_enabled,
+            disableDeepLinking: true
         },
     	interfaceConfigOverwrite: {
             filmStripOnly: properties.filmStripOnly,

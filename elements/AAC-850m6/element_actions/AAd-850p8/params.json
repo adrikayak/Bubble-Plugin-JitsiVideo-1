@@ -71,6 +71,15 @@
             "name": "participant_name",
             "rank": 8,
             "value": "text"
+        },
+        "ABR": {
+            "caption": "Jitsi server URL",
+            "default_val": "meet.jit.si",
+            "doc": "URL of the Jitsi server. Defaults to meet.jit.si",
+            "editor": "DynamicValue",
+            "name": "jitsiServerURL",
+            "rank": 9,
+            "value": "text"
         }
     }
 }

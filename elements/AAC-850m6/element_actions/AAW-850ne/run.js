@@ -6,6 +6,6 @@ function(instance, properties, context) {
 
 
   //Do the operation
-  instance.data.jitsiMeet.executeCommand('displayName', properties.participant_name);
+  instance.data.jitsiMeet.executeCommand('displayName', properties.participant_displayname);
 
 }

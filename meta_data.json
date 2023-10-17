@@ -2,6 +2,7 @@
     "categories": {
         "0": "productivity"
     },
+    "description": "A plugin for embedding videocall meetings based on the Jitsi Meet service",
     "image": "//s3.amazonaws.com/appforest_uf/f1658924838752x294685826516103200/Logo_Jitsi.svg",
     "license": "private",
     "name": "Jitsi"
