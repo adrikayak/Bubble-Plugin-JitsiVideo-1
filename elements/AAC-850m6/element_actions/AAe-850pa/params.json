@@ -1,5 +1,5 @@
 {
-    "caption": "set_avatarurl",
+    "caption": "Set avatar url",
     "fields": {
         "ABG": {
             "caption": "url of the avatar",

@@ -1,19 +1,29 @@
 function(instance, properties, context) {
 
-
   //Load any data 
 
 
-
   //Do the operation
-  if (properties.role == "moderator") {
-        toolbar = ['desktop', 'chat', 'fullscreen','raisehand','tileview','settings']
+  //toolbar = ['camera','chat','closedcaptions','desktop','download','embedmeeting','etherpad','feedback','filmstrip',                   'fullscreen','fodeviceselection','hangup','help','highlight','invite','linktosalesforce','livestreaming','localrecording','microphone','noisesuppression','participants-pane','profile','raisehand','recording','security','select-background','settings','shareaudio','sharedvideo','shortcuts','stats','tileview','toggle-camera','videobackgroundblur','videoquality','whiteboard']
+    
+    if (properties.role == "moderator") {
+        toolbar = ['chat','desktop','fullscreen','localrecording','raisehand','tileview','settings','whiteboard','noisesuppression','select-background','videoquality']
     }
     else {
-        toolbar = [ 'closedcaptions', 'desktop', 'fullscreen',
-        'fodeviceselection', 'hangup', 'profile', 'settings', 'raisehand',
-        'videoquality', 'filmstrip', 'feedback', 'stats', 'shortcuts',
-        'tileview', 'videobackgroundblur', 'help' ]
+        toolbar = ['chat','desktop','fullscreen','localrecording','raisehand','tileview','settings','whiteboard','noisesuppression','select-background','videoquality']
+    }
+    
+   
+    if (properties.hangUpEnabled == true) {
+        toolbar.push('hangup');
+    }
+    
+        if (properties.micEnabled == true) {
+        toolbar.push('microphone');
+    }
+    
+        if (properties.camEnabled == true) {
+        toolbar.push('camera');
     }
         
 	
@@ -22,6 +32,9 @@ function(instance, properties, context) {
 	} else {
     	var domain = properties.jitsiServerURL;
 	}
+    
+    instance.publishState('audio_muted', properties.startWithAudioMuted);
+    instance.publishState('video_muted', properties.startWithVideoMuted);
     
     const options = {
     	roomName: properties.room_name,
@@ -32,15 +45,35 @@ function(instance, properties, context) {
             enableUserRolesBasedOnToken: true,
             enableFeaturesBasedOnToken: true,
             prejoinPageEnabled: properties.prejoin_page_enabled,
-            disableDeepLinking: true
+            disableDeepLinking: true,
+            whiteboard: {
+                enabled: true,
+                collabServerBaseUrl: 'ec2-13-39-82-226.eu-west-3.compute.amazonaws.com'
+            },
+            buttonsWithNotifyClick: [
+				{
+                    key: 'end-conference',
+                    preventExecution: true
+                },
+            	'__end'
+            ]
         },
     	interfaceConfigOverwrite: {
             filmStripOnly: properties.filmStripOnly,
-            TOOLBAR_BUTTONS: toolbar
+            TOOLBAR_BUTTONS: toolbar,
+            SHOW_CHROME_EXTENSION_BANNER: false,
+            buttonsWithNotifyClick: [
+				{
+                    key: 'end-conference',
+                    preventExecution: true
+                },
+            	'__end'
+            ]
         },
         userInfo: { 
             email: context.currentUser.get("email"),
-        	displayName: properties.participant_name
+        	displayName: properties.participant_name,
+            //moderator: false,
         }
     };
     
@@ -111,12 +144,13 @@ function(instance, properties, context) {
         instance.publishState('participant_avatarurl', participant["avatarURL"]);
     });    
     jitsiMeetObject.on('audioMuteStatusChanged', function(status){
-       instance.triggerEvent('audiomute_status_changed');
-       instance.publishState('audio_muted', status["muted"]);
+        instance.publishState('audio_muted', status["muted"]);
+        instance.triggerEvent('audiomute_status_changed');
+
     });
     jitsiMeetObject.on('videoMuteStatusChanged', function(status){
-       instance.triggerEvent('videomute_status_changed');
-       instance.publishState('video_muted', status["muted"]);
+        instance.publishState('video_muted', status["muted"]);
+        instance.triggerEvent('videomute_status_changed');
     });
     
     // Add the object

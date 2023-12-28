@@ -1,5 +1,5 @@
 {
-    "caption": "set_subject",
+    "caption": "Set subject",
     "fields": {
         "ABI": {
             "caption": "subject",

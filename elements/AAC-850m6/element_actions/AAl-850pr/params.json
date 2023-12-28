@@ -1,5 +1,5 @@
 {
-    "caption": "get_displayname",
+    "caption": "get display name",
     "fields": {
         "ABM": {
             "caption": "participant_id",

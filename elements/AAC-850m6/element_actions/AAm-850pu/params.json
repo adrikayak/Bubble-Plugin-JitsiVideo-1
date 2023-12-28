@@ -1,5 +1,5 @@
 {
-    "caption": "get_userinfo",
+    "caption": "Get user info",
     "doc": "",
     "fields": {
         "ABN": {

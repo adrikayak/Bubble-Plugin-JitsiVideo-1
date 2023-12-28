@@ -6,7 +6,7 @@ function(instance, properties, context) {
 
 
   //Do the operation
-  instance.data.jitsiMeet.executeCommand('toggleAudio');
+    instance.data.jitsiMeet.executeCommand('toggleAudio');    
 
 
 }

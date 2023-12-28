@@ -1,5 +1,5 @@
 {
-    "caption": "start_session",
+    "caption": "Start session",
     "fields": {
         "AAy": {
             "caption": "start with audio muted",
@@ -59,6 +59,7 @@
         },
         "ABF": {
             "caption": "start with video muted",
+            "default_val": false,
             "editor": "DynamicValue",
             "name": "startWithVideoMuted",
             "rank": 1,
@@ -80,6 +81,30 @@
             "name": "jitsiServerURL",
             "rank": 9,
             "value": "text"
+        },
+        "ABS": {
+            "caption": "Hang up enabled",
+            "default_val": false,
+            "doc": "Enables the hang up option in the videocall toolbar options toolbar",
+            "editor": "Checkbox",
+            "name": "hangUpEnabled",
+            "rank": 10
+        },
+        "ABV": {
+            "caption": "Mute mic enabled",
+            "default_val": false,
+            "doc": "Enables the mute microphone option in the videocall toolbar options toolbar",
+            "editor": "Checkbox",
+            "name": "micEnabled",
+            "rank": 11
+        },
+        "ABW": {
+            "caption": "Mute cam enabled",
+            "default_val": false,
+            "doc": "Enables the mute camera option in the videocall toolbar options toolbar",
+            "editor": "Checkbox",
+            "name": "camEnabled",
+            "rank": 12
         }
     }
 }

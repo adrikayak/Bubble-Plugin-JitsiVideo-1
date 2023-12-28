@@ -1,5 +1,5 @@
 {
-    "caption": "set_roompassword",
+    "caption": "Set room password",
     "fields": {
         "ABJ": {
             "caption": "password",

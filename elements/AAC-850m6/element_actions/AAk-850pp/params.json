@@ -1,5 +1,5 @@
 {
-    "caption": "get_avatarURL",
+    "caption": "Get avatar URL",
     "fields": {
         "ABL": {
             "caption": "participant_id",

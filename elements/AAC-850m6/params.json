@@ -8,74 +8,54 @@
     "display": "Jitsi",
     "events": {
         "AAN": {
-            "caption": "participant joined the meeting",
+            "caption": "a participant joined the meeting",
             "doc": "Indicates when a new participant has joined the meeting",
             "name": "participant_joined"
         },
         "AAO": {
-            "caption": "participant left the meeting",
+            "caption": "a participant left the meeting",
             "doc": "Indicated when a participant has left the meeting",
             "name": "participant_left"
         },
         "AAP": {
-            "caption": "password_required",
+            "caption": "requires password",
             "doc": "",
             "name": "password_required"
         },
         "AAQ": {
-            "caption": "ready_to_close",
+            "caption": "is ready to close",
             "name": "ready_to_close"
         },
         "AAR": {
-            "caption": "videoconference_joined",
+            "caption": "videoconference joined",
             "name": "videoconference_joined"
         },
         "AAS": {
-            "caption": "videoconference_left",
+            "caption": "videoconference left",
             "name": "videoconference_left"
         },
         "AAT": {
-            "caption": "displayname_change",
+            "caption": "displayname change",
             "name": "displayname_change"
         },
         "AAU": {
-            "caption": "email_change",
+            "caption": "email change",
             "name": "email_change"
         },
         "AAV": {
-            "caption": "avatarurl_change",
+            "caption": "avatar URL change",
             "name": "avatarurl_change"
         },
         "AAs": {
-            "caption": "audioMute_status_changed",
+            "caption": "audio mute status changed",
             "name": "audiomute_status_changed"
         },
         "AAv": {
-            "caption": "videomute_status_changed",
+            "caption": "video mute status changed",
             "name": "videomute_status_changed"
         }
     },
-    "fields": {
-        "AAn": {
-            "caption": "Microphone button",
-            "default_val": false,
-            "doc": "Enable mute mic button at toolbar",
-            "editor": "Checkbox",
-            "in_style": true,
-            "name": "mic_button",
-            "rank": 0
-        },
-        "ABO": {
-            "caption": "Camera button",
-            "default_val": false,
-            "doc": "Enable mute cam button at toolbar",
-            "editor": "Checkbox",
-            "in_style": true,
-            "name": "cam_button",
-            "rank": 1
-        }
-    },
-    "has_reset_fn": false,
+    "has_reset_fn": true,
     "icon": "ion-ios-videocam",
     "property_applications": {
         "Border": true,
@@ -85,7 +65,7 @@
     },
     "states": {
         "AAD": {
-            "caption": "numberOfParticipants",
+            "caption": "number of participants",
             "doc": "Number of participants",
             "initialization_code": {
                 "fn": "function(properties, context) {\n\n\treturn 0;\n}"
@@ -94,7 +74,7 @@
             "value": "number"
         },
         "AAE": {
-            "caption": "onMeeting",
+            "caption": "on meeting",
             "doc": "Is there an active meeting?",
             "initialization_code": {
                 "fn": "function(properties, context) {\n\n\treturn false;\n}"
@@ -103,7 +83,7 @@
             "value": "boolean"
         },
         "AAF": {
-            "caption": "meetingId",
+            "caption": "meeting Id",
             "doc": "ID of the meeting",
             "initialization_code": {
                 "fn": "function(properties, context) {\n    \n \treturn '';\n}"
@@ -120,7 +100,7 @@
             "value": "text"
         },
         "AAH": {
-            "caption": "participant_id",
+            "caption": "participant Id",
             "initialization_code": {
                 "fn": "function(properties, context) {\n\n\treturn 0;\n}"
             },
@@ -128,7 +108,7 @@
             "value": "text"
         },
         "AAI": {
-            "caption": "user_id",
+            "caption": "user id",
             "initialization_code": {
                 "fn": "function(properties, context) {\n\n\treturn '';\n}"
             },
@@ -136,7 +116,7 @@
             "value": "text"
         },
         "AAJ": {
-            "caption": "participantDisplayname",
+            "caption": "participant display name",
             "doc": "Name to be displayed for the participant",
             "initialization_code": {
                 "fn": "function(properties, context) {\n\n\treturn '';\n}"
@@ -145,7 +125,7 @@
             "value": "text"
         },
         "AAK": {
-            "caption": "participantEmail",
+            "caption": "participant email",
             "doc": "Email of the participant",
             "initialization_code": {
                 "fn": "function(properties, context) {\n\n\treturn '';\n}"
@@ -154,7 +134,7 @@
             "value": "text"
         },
         "AAL": {
-            "caption": "participant_avatarurl",
+            "caption": "participant evatar url",
             "initialization_code": {
                 "fn": "function(properties, context) {\n\n\treturn '';\n}"
             },
@@ -162,7 +142,7 @@
             "value": "text"
         },
         "AAM": {
-            "caption": "jitsi_ready",
+            "caption": "jitsi ready",
             "initialization_code": {
                 "fn": "function(properties, context) {\n\n\treturn false;\n}"
             },
@@ -170,7 +150,7 @@
             "value": "boolean"
         },
         "AAt": {
-            "caption": "audio_muted",
+            "caption": "audio muted",
             "doc": "Indicates whether the microphone is currently muted",
             "initialization_code": {
                 "fn": "function(properties, context) {\n    \n}"
@@ -179,7 +159,7 @@
             "value": "boolean"
         },
         "AAu": {
-            "caption": "video_muted",
+            "caption": "video muted",
             "doc": "Indicates whether the camera is currently muted",
             "initialization_code": {
                 "fn": "function(properties, context) {\n\n}"
